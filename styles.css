@@ -1,0 +1,434 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(0, 0, 33);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  display: flex;
+  top: 0; /* Space from top */
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: rgb(18, 18, 62);
+  padding: 0 20px;
+  position: fixed;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: rgb(183, 183, 232);
+  transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+nav ul li a:hover {
+  color: rgb(183, 183, 232);
+  font-size: 1.12rem;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Menu*/
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* Close Button */
+
+.close-btn {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  margin-left: auto; /* Pushes the close button to the right */
+}
+
+main hr {
+  border: 0;
+  background: #9c97f1;
+  height: 1.2px;
+  margin: 0 84px;
+}
+
+.left {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 100px;
+}
+
+/* Ensuring content does not overlap with fixed navbar */
+.firstSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  padding-top: 100px; /* Added to prevent overlap */
+}
+
+.leftSection {
+  max-width: 500px;
+  text-align: left;
+  line-height: 1.5;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.leftSection .button {
+  padding: 30px 0;
+}
+
+.leftSection .btn {
+  padding: 12px;
+  background-color: #141f55;
+  color: white;
+  font-size: 14px;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.leftSection span {
+  color: rgb(189, 138, 238);
+}
+
+.rightSection img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+
+.purple {
+  color: rgb(189, 138, 238);
+}
+
+.text-grey {
+  color: grey;
+}
+
+#element {
+  color: rgb(189, 138, 238);
+}
+
+.secondSection {
+  max-width: 80vw;
+  margin: auto;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.secondSection h1 {
+  font-size: 1.9rem;
+}
+
+.secondSection .box {
+  background: white;
+  width: 80vw;
+  height: 2px;
+  margin: 56px 0;
+  display: flex;
+}
+
+.secondSection .vertical {
+  height: 75px;
+  width: 1px;
+  background-color: white;
+  margin: 0 120px;
+}
+
+.vertical-title {
+  position: relative;
+  top: 75px;
+  width: 150px;
+}
+
+.vertical-desc {
+  position: relative;
+  top: 85px;
+  color: grey;
+  width: 150px;
+  font-size: 15px;
+}
+
+footer {
+  background-color: rgb(28, 41, 59);
+  padding-top: 20px;
+}
+
+.footer {
+  display: flex;
+  padding: 23px 122px;
+  justify-content: space-evenly;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer > div {
+  width: 200px;
+}
+
+footer .footer-rights {
+  text-align: center;
+  color: grey;
+  padding: 12px 0;
+}
+
+.btn {
+  padding: 12px 24px;
+  background-color: #141f55;
+  color: white;
+  font-size: 14px;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(183, 183, 232);
+  color: black;
+}
+
+/* Third Section */
+.thirdSection {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 80px;
+}
+
+/*-----------contact--------*/
+.contact-container {
+  display: flex;
+  width: 80%;
+  max-width: 1000px;
+  gap: 40px;
+}
+
+.contact-left {
+  flex-basis: 35%;
+}
+
+.contact-right {
+  flex-basis: 60%;
+}
+
+.contact-left p {
+  margin-top: 30px;
+}
+
+.contact-left p i {
+  color: rgb(183, 183, 232);
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social-icons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #ababab;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: rgb(183, 183, 232);
+  transform: translateY(-5px);
+}
+
+.contact-right form {
+  width: 100%;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+form button {
+  background-color: rgb(154, 154, 230);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: rgb(86, 86, 223);
+}
+
+h1 {
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* navigation bar slider */
+nav .fas {
+  display: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .left {
+    margin-left: 10px;
+  }
+  .box {
+    flex-direction: column;
+  }
+
+  main hr {
+    margin: 0 18px;
+  }
+
+  .secondSection {
+    min-height: 370vh;
+  }
+  .vertical {
+    min-height: 65vh;
+  }
+  .vertical-title,
+  .vertical-desc {
+    left: 40px;
+  }
+  .secondSection .box {
+    width: 100%;
+    background-color: #ffffff;
+  }
+
+  nav {
+    flex-direction: row;
+  }
+
+  .firstSection {
+    flex-direction: column-reverse;
+  }
+
+  footer {
+    display: block;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  nav .fas {
+    display: block;
+    font-size: 25px;
+  }
+
+  nav ul .fas {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    cursor: pointer;
+  }
+  nav ul {
+    position: fixed; /* Fixed position for full-length menu */
+    top: 0; /* Align to the top */
+    right: 0; /* Align to the right */
+    width: 35%; /* Set width to 40% */
+    height: 100%; /* Full height */
+    background: #07083a;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0; /* Padding for the menu */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for dropdown */
+    overflow: hidden;
+    transition: width 0.4s ease-in-out;
+  }
+
+  nav ul.active {
+    display: flex; /*Show the menu when active */
+    right: 0;
+  }
+
+  nav ul li {
+    margin: 20px 0; /* Space out the links */
+    text-align: center; /* Center the text */
+  }
+
+  .hamburger {
+    display: block; /* Show the hamburger icon */
+    font-size: 1.5rem;
+    margin-right: 0;
+    color: white;
+  }
+
+  .close-btn {
+    display: block; /* Show the close button */
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 20px; /* Margin for spacing */
+  }
+
+  /* responsive contact me  */
+  .contact-container {
+    width: 80%;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+}
