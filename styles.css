@@ -350,6 +350,10 @@ nav .fas {
   .vertical-desc {
     left: 40px;
   }
+
+  .vertical-desc {
+    top: 40px;
+  }
   .secondSection .box {
     width: 100%;
     background-color: #ffffff;
@@ -410,7 +414,6 @@ nav .fas {
     margin: 20px 0; /* Space out the links */
     text-align: center; /* Center the text */
   }
-
   .hamburger {
     display: block; /* Show the hamburger icon */
     font-size: 1.5rem;
@@ -430,5 +433,19 @@ nav .fas {
     width: 80%;
     flex-direction: column;
     margin-bottom: 50px;
+  }
+  .line {
+    width: 38px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    margin-right: 10px;
+    margin-top: 39px;
+  }
+  .lines {
+    width: 38px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    margin-right: 10px;
+    margin-top: 62px;
   }
 }
