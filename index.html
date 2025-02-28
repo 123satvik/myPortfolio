@@ -141,7 +141,45 @@
                 </form>
             </div>
         </section>
-<script src="script.js"></script>
+
+        <script>
+            document.querySelectorAll('.scroll-link').forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault(); // Prevent default jump
+                    const targetId = this.getAttribute('href').substring(1); // Get section id
+                    const targetSection = document.getElementById(targetId);
+
+                    window.scrollTo({
+                        top: targetSection.offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            function toggleMenu() {
+                const navbar = document.getElementById('sidemenu');
+
+                if (navbar.classList.contains('active')) {
+                    navbar.style.width = "0"; // Shrinks smoothly
+                    setTimeout(() => {
+                        navbar.classList.remove('active');
+                    }, 400); // Matches the CSS transition time
+                } else {
+                    navbar.classList.add('active');
+                    navbar.style.width = "30%"; // Expands smoothly
+                }
+            }
+        </script>
+    </main>
+
+    <footer>
+        <div class="footer-rights">
+            Copyright &#169; www.satvikportfolio.com | All rights reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script src="script.js"></script>
 
 </body>
 
